@@ -14,7 +14,6 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -35,16 +34,31 @@ Users should be able to:
 **Desktop Design**
 
 ![](Solution/Desktop%20design.png)
+
+**Desktop Design error state**
+
 ![](Solution/Desktop%20design%20error%20state.png)
+
+**Desktop Design success state**
+
 ![](Solution/Desktop%20design%20success%20state.png)
+
+**Mobile Design**
+
 ![](Solution/Mobile%20design.png)
+
+**Mobile Design error state**
+
 ![](Solution/Mobile%20design%20error%20state.png)
+
+**Mobile Design success state**
+
 ![](Solution/Mobile%20success%20state%20design.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [here](https://github.com/DIICA99/Intro-component-with-signup-form)
+- Live Site URL: [here](https://diica99.github.io/Intro-component-with-signup-form/)
 
 ## My process
 
@@ -77,5 +91,4 @@ Use this section to outline areas that you want to continue focusing on in futur
  
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@DIICA99](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@DIICA99](https://www.frontendmentor.io/profile/DIICA99)
