@@ -1,0 +1,394 @@
+/*****  variables *****/
+//  primary
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+//  accent
+$blue: hsl(248, 32%, 49%);
+
+//  neutral
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
+//  border radius
+$border-radius: 9px;
+
+//  box shadow
+$box-shadow: 0 7px 3px rgba(0, 0, 0, .2);
+
+/*****  global style *****/
+::placeholder {
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: .7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.--mb {
+  margin-bottom: 1.1rem;
+  position: relative;
+}
+
+.__error-icon {
+  position: absolute;
+  right: 1.25rem;
+  top: .52rem;
+  display: none;
+}
+
+.--error {
+  border: 1px solid $red;
+}
+
+.--success {
+  border: 1px solid $green;
+}
+
+.--error-message {
+  color: $red;
+  text-align: right;
+  display: none;
+  font-style: italic;
+}
+
+
+input {
+  border: 1px solid #e2e2e2;
+}
+
+/*****  desktop design *****/
+body {
+  background-image: url("../images/bg-intro-desktop.png");
+  background-size: cover;
+  background-color: $red;
+}
+
+main {
+  position: relative;
+  display: flex;
+  height: 95vh;
+  padding: 0 9.375rem;
+}
+
+//  heading section
+section.main__heading-section {
+  position: relative;
+  height: fit-content;
+  flex-basis: 50%;
+  letter-spacing: 1px;
+  padding: 0 1.875rem 0 0;
+  align-self: center;
+
+  h1 {
+    width: 23rem;
+    text-align: left;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+section.main__form-section {
+  position: relative;
+  height: fit-content;
+  flex-basis: 50%;
+  padding: 0 1.5625rem;
+  align-self: center;
+
+  p {
+    //margin-top: 6.25rem;
+    padding: 1.1rem 0;
+    background-color: $blue;
+    border-radius: $border-radius;
+    text-align: center;
+    box-shadow: $box-shadow;
+    margin-bottom: 1.25rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  //  form
+  form {
+    background-color: #fff;
+    padding: 1.8rem 1.5rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    width: 100%;
+
+    input {
+      padding: .625rem .9375rem;
+      width: 100%;
+      border-radius: 3px;
+      color: #000;
+      font-weight: bold;
+
+      &:focus {
+        outline: none;
+        border-color: $blue;
+      }
+    }
+
+    .btn {
+      background-color: $green;
+      border: none;
+      border-radius: 3px;
+      padding: .936rem 0;
+      width: 100%;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 1px rgba(0, 169, 97, 0.8);
+      margin-bottom: 1.25rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(77, 217, 156);
+        transition: all 250ms;
+      }
+    }
+
+    .form--terms-and-services {
+      text-align: center;
+
+      small {
+        color: $grayishBlue;
+        font-size: 11px;
+      }
+
+      span {
+        color: $red;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//  footer
+footer {
+  display: block;
+  position: absolute;
+  bottom: 6.66px;
+  width: 100%;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+/*****  responsive design *****/
+
+/*****  tablet layout *****/
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+  }
+
+  //  main
+  main {
+    display: block;
+    position: relative;
+    height: fit-content;
+    align-self: center;
+  }
+
+  section.main__heading-section {
+    //padding-right: 0;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-right: 0;
+
+    h1 {
+      margin: auto;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  section.main__form-section {
+    padding: 0;
+    align-self: auto;
+  }
+}
+
+/*****  mobile layout 414px *****/
+@media (max-width: 414px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+    background-size: contain;
+    background-color: $red;
+    position: relative;
+  }
+
+  .__error-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 1rem;
+  }
+
+  //  main
+  main {
+    display: block;
+    position: relative;
+    padding: 4.375rem 1.25rem 3.125rem 1.25rem;
+    height: fit-content;
+  }
+
+  //  heading section
+  section.main__heading-section {
+    position: relative;
+    margin-bottom: 3.125rem;
+    text-align: center;
+    height: fit-content;
+    padding: 0;
+
+    h1 {
+      width: 15.625rem;
+      margin: 0 auto 1.25rem auto;
+      font-size: 1.50rem;
+      text-align: center;
+      line-height: 2rem;
+    }
+
+    p {
+      letter-spacing: 1px;
+      line-height: 1.50rem;
+      text-align: center;
+    }
+  }
+
+  //  form section
+  section.main__form-section {
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0;
+    height: fit-content;
+
+    p {
+      background-color: $blue;
+      padding: 0.9375rem 4rem;
+      text-align: center;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      margin-bottom: 1.25rem;
+      margin-top: 0;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    //  form
+    form {
+      background-color: #fff;
+      position: relative;
+      border-radius: $border-radius;
+      padding: 1.25rem;
+      box-shadow: $box-shadow;
+
+      input {
+        padding: .9375rem;
+        width: 100%;
+        border-radius: 3px;
+        color: #000;
+        font-weight: bold;
+      }
+
+      .btn {
+        background-color: $green;
+        border: none;
+        border-radius: 3px;
+        padding: 0.9375rem 0;
+        width: 100%;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 1px rgba(0, 169, 97, 0.8);
+        margin-bottom: 1.25rem;
+      }
+
+      small {
+        font-size: 12px;
+      }
+
+      .form--terms-and-services {
+        text-align: center;
+
+        small {
+          color: $grayishBlue;
+        }
+
+        span {
+          color: $red;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+/*****  mobile layout 320px *****/
+@media (min-width: 320px) and (max-width: 360px) {
+
+  small {
+    font-size: 9px !important;
+  }
+
+  .__error-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 1rem;
+  }
+
+  section.main__form-section {
+    p {
+      background-color: $blue;
+      padding: 0.9375rem 2rem;
+      text-align: center;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      margin-bottom: 1.25rem;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/*****  desktop layout 1024 - 1440  *****/
+@media (min-width: 1024px) and (max-width: 1339px) {
+  main {
+    padding: 3.125rem;
+  }
+}
+
+/*****  desktop layout 2560 *****/
+@media (min-width: 2560px) {
+  main {
+    padding: 31.25rem;
+  }
+}

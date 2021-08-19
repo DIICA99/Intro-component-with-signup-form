@@ -1,0 +1,332 @@
+/*****  variables *****/
+/*****  global style *****/
+::placeholder {
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.--mb {
+  margin-bottom: 1.1rem;
+  position: relative;
+}
+
+.__error-icon {
+  position: absolute;
+  right: 1.25rem;
+  top: 0.52rem;
+  display: none;
+}
+
+.--error {
+  border: 1px solid #ff7a7a;
+}
+
+.--success {
+  border: 1px solid #38cc8c;
+}
+
+.--error-message {
+  color: #ff7a7a;
+  text-align: right;
+  display: none;
+  font-style: italic;
+}
+
+input {
+  border: 1px solid #e2e2e2;
+}
+
+/*****  desktop design *****/
+body {
+  background-image: url("../images/bg-intro-desktop.png");
+  background-size: cover;
+  background-color: #ff7a7a;
+}
+
+main {
+  position: relative;
+  display: flex;
+  height: 95vh;
+  padding: 0 9.375rem;
+}
+
+section.main__heading-section {
+  position: relative;
+  height: fit-content;
+  flex-basis: 50%;
+  letter-spacing: 1px;
+  padding: 0 1.875rem 0 0;
+  align-self: center;
+}
+section.main__heading-section h1 {
+  width: 23rem;
+  text-align: left;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 1.25rem;
+}
+section.main__heading-section p {
+  text-align: left;
+}
+
+section.main__form-section {
+  position: relative;
+  height: fit-content;
+  flex-basis: 50%;
+  padding: 0 1.5625rem;
+  align-self: center;
+}
+section.main__form-section p {
+  padding: 1.1rem 0;
+  background-color: #6055a5;
+  border-radius: 9px;
+  text-align: center;
+  box-shadow: 0 7px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.25rem;
+}
+section.main__form-section p span {
+  font-weight: bold;
+}
+section.main__form-section form {
+  background-color: #fff;
+  padding: 1.8rem 1.5rem;
+  border-radius: 9px;
+  box-shadow: 0 7px 3px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+section.main__form-section form input {
+  padding: 0.625rem 0.9375rem;
+  width: 100%;
+  border-radius: 3px;
+  color: #000;
+  font-weight: bold;
+}
+section.main__form-section form input:focus {
+  outline: none;
+  border-color: #6055a5;
+}
+section.main__form-section form .btn {
+  background-color: #38cc8c;
+  border: none;
+  border-radius: 3px;
+  padding: 0.936rem 0;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 1px rgba(0, 169, 97, 0.8);
+  margin-bottom: 1.25rem;
+}
+section.main__form-section form .btn:hover {
+  cursor: pointer;
+  background-color: #4dd99c;
+  transition: all 250ms;
+}
+section.main__form-section form .form--terms-and-services {
+  text-align: center;
+}
+section.main__form-section form .form--terms-and-services small {
+  color: #b9b6d3;
+  font-size: 11px;
+}
+section.main__form-section form .form--terms-and-services span {
+  color: #ff7a7a;
+  font-weight: bold;
+}
+
+footer {
+  display: block;
+  position: absolute;
+  bottom: 6.66px;
+  width: 100%;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #3e52a3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*****  responsive design *****/
+/*****  tablet layout *****/
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+  }
+
+  main {
+    display: block;
+    position: relative;
+    height: fit-content;
+    align-self: center;
+  }
+
+  section.main__heading-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-right: 0;
+  }
+  section.main__heading-section h1 {
+    margin: auto;
+  }
+  section.main__heading-section p {
+    text-align: center;
+  }
+
+  section.main__form-section {
+    padding: 0;
+    align-self: auto;
+  }
+}
+/*****  mobile layout 414px *****/
+@media (max-width: 414px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+    background-size: contain;
+    background-color: #ff7a7a;
+    position: relative;
+  }
+
+  .__error-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 1rem;
+  }
+
+  main {
+    display: block;
+    position: relative;
+    padding: 4.375rem 1.25rem 3.125rem 1.25rem;
+    height: fit-content;
+  }
+
+  section.main__heading-section {
+    position: relative;
+    margin-bottom: 3.125rem;
+    text-align: center;
+    height: fit-content;
+    padding: 0;
+  }
+  section.main__heading-section h1 {
+    width: 15.625rem;
+    margin: 0 auto 1.25rem auto;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+  section.main__heading-section p {
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  section.main__form-section {
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0;
+    height: fit-content;
+  }
+  section.main__form-section p {
+    background-color: #6055a5;
+    padding: 0.9375rem 4rem;
+    text-align: center;
+    border-radius: 9px;
+    box-shadow: 0 7px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.25rem;
+    margin-top: 0;
+  }
+  section.main__form-section p span {
+    font-weight: bold;
+  }
+  section.main__form-section form {
+    background-color: #fff;
+    position: relative;
+    border-radius: 9px;
+    padding: 1.25rem;
+    box-shadow: 0 7px 3px rgba(0, 0, 0, 0.2);
+  }
+  section.main__form-section form input {
+    padding: 0.9375rem;
+    width: 100%;
+    border-radius: 3px;
+    color: #000;
+    font-weight: bold;
+  }
+  section.main__form-section form .btn {
+    background-color: #38cc8c;
+    border: none;
+    border-radius: 3px;
+    padding: 0.9375rem 0;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 1px rgba(0, 169, 97, 0.8);
+    margin-bottom: 1.25rem;
+  }
+  section.main__form-section form small {
+    font-size: 12px;
+  }
+  section.main__form-section form .form--terms-and-services {
+    text-align: center;
+  }
+  section.main__form-section form .form--terms-and-services small {
+    color: #b9b6d3;
+  }
+  section.main__form-section form .form--terms-and-services span {
+    color: #ff7a7a;
+    font-weight: bold;
+  }
+}
+/*****  mobile layout 320px *****/
+@media (min-width: 320px) and (max-width: 360px) {
+  small {
+    font-size: 9px !important;
+  }
+
+  .__error-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 1rem;
+  }
+
+  section.main__form-section p {
+    background-color: #6055a5;
+    padding: 0.9375rem 2rem;
+    text-align: center;
+    border-radius: 9px;
+    box-shadow: 0 7px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.25rem;
+  }
+  section.main__form-section p span {
+    font-weight: bold;
+  }
+}
+/*****  desktop layout 1024 - 1440  *****/
+@media (min-width: 1024px) and (max-width: 1339px) {
+  main {
+    padding: 3.125rem;
+  }
+}
+/*****  desktop layout 2560 *****/
+@media (min-width: 2560px) {
+  main {
+    padding: 31.25rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
